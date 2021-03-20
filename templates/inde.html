@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CTA</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="static/styles/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="static/styles/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="static/styles/css/animate.css"/>
+
+		<link rel="stylesheet" href="static/styles/css/style.css" />
+
+    <script type="text/javascript" src="{{url_for('static', filename='jquery-1.11.2.min.js')}}"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='bootstrap.min.js')}}static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZXJBVDf7R4JqmSpopVPoduIGWx1IwpBM"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='plugins.js')}}"></script>
+
+		
+
+	</head>
+	<body>
+	<div class="svg-wrap">
+      <svg width="64" height="64" viewBox="0 0 64 64">
+       
+      </svg>
+
+      <svg width="64" height="64" viewBox="0 0 64 64">
+       
+      </svg>
+    </div>
+
+
+   <div class="container-fluid">
+
+
+    <section id="header">
+
+  
+      <nav class="navbar navbar-fixed-top navbar-default bottom">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#header">PyGirls</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="menu">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About</a></li>              
+              <li><a href="#portfolio">Portfolio</a></li>
+			  <li><a href="#team">Team</a></li>
+			  <li><a href="#info">Info</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+
+      <!-- SLIDER -->
+      <div class="header-slide">
+        <section>
+          <div id="loader" class="pageload-overlay" data-opening="M 0,0 0,60 80,60 80,0 z M 80,0 40,30 0,60 40,30 z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+              <path d="M 0,0 0,60 80,60 80,0 Z M 80,0 80,60 0,60 0,0 Z"/>
+            </svg>
+          </div> 
+          
+          <div class="image-slide bg-fixed">
+            <div class="overlay">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+
+                    <div class="slider-content">
+                      <h1></h1>
+                      <p>We are a creative agency from Churchgate, Mumbai</p>
+                    </div>
+
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+
+          <nav class="nav-slide">
+            <a class="prev" href="#prev">
+              <span class="icon-wrap">
+                <svg class="icon" width="32" height="32" viewBox="0 0 64 64">
+                  <use xlink:href="#arrow-left">
+                </svg>
+              </span>
+              <div>
+                <span>Prev Photo</span>
+                <h3>...</h3>
+                <p>...</p>
+                <img alt="Previous thumb">
+              </div>
+            </a>
+            <a class="next" href="#next">
+              <span class="icon-wrap">
+                <svg class="icon" width="32" height="32" viewBox="0 0 64 64">
+                  <use xlink:href="#arrow-right">
+                </svg>
+              </span>
+              <div>
+                <span>Next Photo</span>
+                <h3>...</h3>
+                <p>...</p>
+                <img alt="Next thumb">
+              </div>
+            </a>
+          </nav>
+        </section>
+
+        <script type="text/javascript">
+        var dataHeader = [
+                            {
+                              bigImage :"/static/images/slide-1.jpg",
+                              title : "Best Slogans Available",
+							  author : "Templatestock"
+                            },
+                            {
+                              bigImage :"/static/images/slide-2.jpg",
+                              title : "We A Creative Team",
+                              author : "Creative Slogans"
+                            },
+                            {
+                              bigImage :"/static/images/slide-3.jpg",
+                              title : "Achieve Success",
+                              author : "Enhance your Business"
+                            }
+                        ],
+            loaderSVG = new SVGLoader(document.getElementById('loader'), {speedIn : 600, speedOut : 600, easingIn : mina.easeinout});
+            loaderSVG.show()
+        </script>
+
+      </div>
+    </section>
+
+    <!-- HEADER END -->
+
+
+    <br><br>
+    <div class="headie" style="text-align: center;">
+    <h1><b>Phrases and Slogans Maker</b></h1>
+    <h3>Find Catchy Slogans or Phrases for your brand</h3>
+  </div>
+  <div class="box" style="text-align: center;"><br><br>
+    
+<label for="Speech Recognition">Add Keywords</label><br>
+<form action="final" method="POST" >
+<input type="text" name="speechToText" id="speechToText" placeholder="Type or Speak Something" style="width:300px;"/><span></span>
+<input type="text" name="cta" id="cta" placeholder="Type" style="width:300px;"/><span></span>
+<a onclick="record()"><i style="font-size: 22px;" class="fa fa-microphone " aria-hidden="true"></i></a><br><br>
+<button type="submit">Search</button>
+</form>
+<br>
+{% if(v)%}
+{% for i in v:%}
+<li> {{i}}</li><span></span> <br>
+
+{% endfor %}
+{% endif %}
+
+
+<!-- <button id='btnSpeak' style="background-color:rgb(55, 55, 116);color:white">To Audio</button>
+<br><label>Select Voice</label> <br><select id='voiceList'></select> <br><br> -->
+
+
+
+
+</div>
+
+
+    <section id="about" class="light">
+      <header class="title">
+        <h2>About <span>Us</span></h2>
+        <p>Every great business requires a bit of creativity in order to stand out. When it comes to launching a new venture or trying to revamp an existing one, your to-do list can seem a bit overwhelming. While the creative aspects of running a business might seem like the fun part, we all need a bit of inspiration from time to time to get the juices flowing.
+
+        </p>
+      </header>
+
+      <div class="container">
+        <div class="row table-row">
+          <div class="col-sm-6 hidden-xs">
+            <div class="section-content">
+              <div class="big-image" style="background-image:url(/static/images/1.png)"></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="section-content">
+              <div class="about-content left animated" data-animate="fadeInLeft">
+                <div class="about-icon"><i class="fa fa-code"></i></div>
+                <div class="about-detail">
+                  <h4>Use a slogan generator</h4>
+                  <p>One way to add a little bit of life to your business or campaign is with a catchy slogan. Think about it. Major corporations have been able to win over customers for years just with the right phrasing. Nike has ‘Just do it,’ the popular makeup brand, Maybelline, uses the tagline, ‘Maybe she’s born with it. Maybe it’s Maybelline.’ We’ve all heard these a million times, even when we aren’t thinking directly about the brands themselves. That’s why the right slogan can be so powerful in creating brand awareness or sparking interest in a business or new project.</p>
+                </div>
+              </div>
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+                <div class="about-icon"><i class="fa fa-desktop"></i></div>
+                <div class="about-detail">
+                  <h4>Choose the perfect tagline</h4>
+                  <p>That’s it! Now it’s time to select the perfect slogan for your latest endeavor that’s sure to stick in your audience’s mind long after they first hear it. Choose from all the answers the slogan maker generates from a built-in algorithm. Don’t be afraid to use the slogan maker solely for inspiration, and rest assured that this slogan maker online draws upon thousands of tried-and-true advertising slogans that have been used by real companies over the past several decades.  </p>
+                </div>
+              </div>
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+                <div class="about-icon"><i class="fa fa-cube"></i></div>
+                <div class="about-detail">
+                  <h4>Stand out in seconds!</h4>
+                  <p>The slogan maker is quick, easy to use, and within nanoseconds you can have thousands of captivating phrases right at your fingertips. After you’ve taken some time to choose the perfect tagline from the slogan generator you’re ready to apply it to your brand and begin using it on your website and social media platforms. If you want to take your slogan to the next level, consider presentation. Now all that’s left to do is see if you can work it into the headline of your website or include it in your logo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.row table-row -->
+      </div> <!-- /.container -->
+    </section>
+	
+	
+	    
+    <!-- TEAM -->
+
+    <section id="team" class="light">
+      <header class="title">
+        <h2>Creative <span>Team</span></h2>
+        <p>Get more Insight to our team</p>
+      </header>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown">
+              <div class="img-team">
+                <img src="static/images/" alt="" class="img-circle">
+              </div>
+
+              <h3>Sakshi Dhoble</h3>
+              <h5>Creative Director</h5>
+
+              <p>B.E Information Technology</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/team-2.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Aditi Deshmukh</h3>
+              <h5>Designer</h5>
+
+              <p>B.E Information Technology</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+          
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/" alt="" class="img-circle">
+              </div>
+
+              <h3>Vanshika Jethani</h3>
+              <h5>Designer</h5>
+
+              <p>B.E Information Technology</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="images/team-4.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Mahima Samantara</h3>
+              <h5>Creative head</h5>
+
+              <p>B.E Information Technology</p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="#" class="fa fa-twitter"></a></li>
+                  <li><a href="#" class="fa fa-linkedin"></a></li>
+                  <li><a href="#" class="fa fa-facebook"></a></li>
+                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul> 
+              </div>                
+            </div>
+          </div>
+        </div>
+      </div> <!-- /.container -->
+    </section>
+	
+	   
+
+    <!-- FOOTER CONTACT -->
+
+     <section id="contact" class="dark">
+      <header class="title">
+        <h2>Contact <span>Us</span></h2>
+        <!-- <p>Lorem ipsum Esse esse cillum nisi cillum deserunt tempor ut pariatur qui officia. Lorem ipsum Magna eu irure sint occaecat cupidatat dolore minim irure cillum.</p> -->
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 animated" data-animate="fadeInLeft">
+            <form action="#">
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Your Name">
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" placeholder="Your Email">
+                </div>
+                <div class="col-md-12">
+                  <textarea class="form-control" rows="3" placeholder="Tell Us Everything"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-default submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="col-md-4 animated" data-animate="fadeInRight">
+            <address>
+                <span><i class="fa fa-map-marker fa-lg"></i> Marine Lines, Metro Cinema, 400001</span>
+                <span><i class="fa fa-phone fa-lg"></i> (91) 992366752</span>
+                <span><i class="fa fa-envelope-o fa-lg"></i> <a href="mailto:contact@example.com">vanshi@gmail.com</a></span>
+                <span><i class="fa fa-globe fa-lg"></i> <a href="http://support.example.com">Aditisupport.example.com</a></span>
+            </address>
+          </div>
+		  
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Made BY <i class="fa fa-heart"></i> <a href="http://templatestock.co">PyGirls</a></p>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+   </div><!-- /.container-fluid -->
+    
+    <!-- SCRIPT -->
+    <script>
+      var txtInput = document.querySelector('#speechToText');
+      var voiceList = document.querySelector('#voiceList');
+      var btnSpeak = document.querySelector('#btnSpeak');
+      var synth = window.speechSynthesis;
+      var voices = [];
+
+      PopulateVoices();
+      if (speechSynthesis !== undefined) {
+          speechSynthesis.onvoiceschanged = PopulateVoices;
+      }
+
+      btnSpeak.addEventListener('click', () => {
+          var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
+          var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+          voices.forEach((voice) => {
+              if (voice.name === selectedVoiceName) {
+                  toSpeak.voice = voice;
+              }
+          });
+          synth.speak(toSpeak);
+      });
+
+      function PopulateVoices() {
+          voices = synth.getVoices();
+          var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+          voiceList.innerHTML = '';
+          voices.forEach((voice) => {
+              var listItem = document.createElement('option');
+              listItem.textContent = voice.name;
+              listItem.setAttribute('data-lang', voice.lang);
+              listItem.setAttribute('data-name', voice.name);
+              voiceList.appendChild(listItem);
+          });
+
+          voiceList.selectedIndex = selectedIndex;
+      }
+  </script>
+  
+  <script>
+      function record() {
+          var recognition = new webkitSpeechRecognition();
+          recognition.lang = "en-GB";
+
+          recognition.onresult = function (event) {
+              
+              document.getElementById('speechToText').value = event.results[0][0].transcript;
+          }
+          recognition.start();
+
+      }
+  </script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
+	</body>
+</html>
