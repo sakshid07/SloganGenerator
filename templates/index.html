@@ -2,34 +2,68 @@
 
 <html lang="en">
 	<head>
+  
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CTA</title>
+    <title>CTA-Slogan Generator</title>
+
+    <style>
+.container123:hover {
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.container123 {
+  margin: auto;
+  width:550px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 2px 16px;
+}
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.button {
+  transition-duration: 0.4s;
+}
+.button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  background-color: #000000; 
+  color: white;
+}
+</style>
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="static/styles/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="static/styles/css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="static/styles/css/animate.css"/>
 
-		<link rel="stylesheet" href="static/styles/css/style.css" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    <script type="text/javascript" src="{{url_for('static', filename='jquery-1.11.2.min.js')}}"></script>
-    <script type="text/javascript" src="{{url_for('static', filename='bootstrap.min.js')}}static/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/styles/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/styles/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/static/styles/css/animate.css"/>
+
+		<link rel="stylesheet" href="/static/styles/css/style.css" />
+
+    <script type="text/javascript" src="/static/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZXJBVDf7R4JqmSpopVPoduIGWx1IwpBM"></script>
-    <script type="text/javascript" src="{{url_for('static', filename='plugins.js')}}"></script>
-
-		
+    <script type="text/javascript" src="/static/js/plugins.js"></script>
 
 	</head>
 	<body>
 	<div class="svg-wrap">
       <svg width="64" height="64" viewBox="0 0 64 64">
-       
+        <path id="arrow-left" d="M26.667 10.667q1.104 0 1.885 0.781t0.781 1.885q0 1.125-0.792 1.896l-14.104 14.104h41.563q1.104 0 1.885 0.781t0.781 1.885-0.781 1.885-1.885 0.781h-41.563l14.104 14.104q0.792 0.771 0.792 1.896 0 1.104-0.781 1.885t-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.813-0.771-1.896t0.771-1.896l18.667-18.667q0.792-0.771 1.896-0.771z"></path>
       </svg>
 
       <svg width="64" height="64" viewBox="0 0 64 64">
-       
+        <path id="arrow-right" d="M37.333 10.667q1.125 0 1.896 0.771l18.667 18.667q0.771 0.771 0.771 1.896t-0.771 1.896l-18.667 18.667q-0.771 0.771-1.896 0.771-1.146 0-1.906-0.76t-0.76-1.906q0-1.125 0.771-1.896l14.125-14.104h-41.563q-1.104 0-1.885-0.781t-0.781-1.885 0.781-1.885 1.885-0.781h41.563l-14.125-14.104q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z"></path>
       </svg>
     </div>
 
@@ -38,8 +72,6 @@
 
 
     <section id="header">
-
-  
       <nav class="navbar navbar-fixed-top navbar-default bottom">
         <div class="container">
           <div class="navbar-header">
@@ -55,10 +87,8 @@
           <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#header">Home</a></li>
-              <li><a href="#about">About</a></li>              
-              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About</a></li>         
 			  <li><a href="#team">Team</a></li>
-			  <li><a href="#info">Info</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div> 
@@ -85,9 +115,9 @@
                       <p>We are a creative agency from Churchgate, Mumbai</p>
                     </div>
 
-                  </div> 
+                  </div>
                 </div> 
-              </div> 
+              </div>
             </div> 
           </div> 
 
@@ -126,17 +156,17 @@
                             {
                               bigImage :"/static/images/slide-1.jpg",
                               title : "Best Slogans Available",
-							  author : "Templatestock"
+							  author : "Aditi"
                             },
                             {
                               bigImage :"/static/images/slide-2.jpg",
-                              title : "We A Creative Team",
-                              author : "Creative Slogans"
+                              title : "Enhance your Business",
+                              author : "Sakshi"
                             },
                             {
                               bigImage :"/static/images/slide-3.jpg",
                               title : "Achieve Success",
-                              author : "Enhance your Business"
+                              author : "Vanshika"
                             }
                         ],
             loaderSVG = new SVGLoader(document.getElementById('loader'), {speedIn : 600, speedOut : 600, easingIn : mina.easeinout});
@@ -148,25 +178,46 @@
 
     <!-- HEADER END -->
 
+    <div style="float:right;">
+      <div id="google_translate_element"></div>
+    </div>
 
     <br><br>
     <div class="headie" style="text-align: center;">
     <h1><b>Phrases and Slogans Maker</b></h1>
     <h3>Find Catchy Slogans or Phrases for your brand</h3>
   </div>
+
   <div class="box" style="text-align: center;"><br><br>
     
-<label for="Speech Recognition">Add Keywords</label><br>
+<h3 style="font-family: 'Lato', sans-serif;">Add Keywords and CTA</h3><br>
+
 <form action="final" method="POST" >
-<input type="text" name="speechToText" id="speechToText" placeholder="Type or Speak Something" style="width:300px;"/><span></span>
-<input type="text" name="cta" id="cta" placeholder="Type" style="width:300px;"/><span></span>
-<a onclick="record()"><i style="font-size: 22px;" class="fa fa-microphone " aria-hidden="true"></i></a><br><br>
-<button type="submit">Search</button>
-</form>
-<br>
-{% if(v)%}
+  <input type="text" name="speechToText" id="speechToText" placeholder="Keywords" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;width:300px;height:40px;"/>
+  <a onclick="recordspeechtotext()"> <i style="color:rgb(45, 45, 168); font-size: 22px;" class="fa fa-microphone fa-2x" aria-hidden="true"></i></a>
+  <br><input type="text" name="cta" id="cta" placeholder="CTA" style="width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;width:300px;height:40px;"/><span></span>
+  <a onclick="recordcta()"><i style="color:rgb(45, 45, 168);font-size: 22px;" class="fa fa-microphone fa-3x " aria-hidden="true"></i></a><br><br>
+  <button type="submit" class="button" style="height: 43px;border-radius: 4px; width:110px ;color: white;background-color:rgb(64, 65, 68);border:none">Search</button>
+  </form>
+<br><br>
+
+
+
+{% if(v)%}  
+<h3 style="font-family: 'Lato', sans-serif;">Here are the Generated Slogans!</h3><br>
 {% for i in v:%}
-<li> {{i}}</li><span></span> <br>
+<div class="container123">
+  <h5>{{i}}</h5>
+  
+</div>  
+<!-- <li> </li><span></span> -->
+ <br>
 
 {% endfor %}
 {% endif %}
@@ -175,25 +226,22 @@
 <!-- <button id='btnSpeak' style="background-color:rgb(55, 55, 116);color:white">To Audio</button>
 <br><label>Select Voice</label> <br><select id='voiceList'></select> <br><br> -->
 
-
-
-
 </div>
 
+
+    <!-- ABOUT -->
 
     <section id="about" class="light">
       <header class="title">
         <h2>About <span>Us</span></h2>
-        <p>Every great business requires a bit of creativity in order to stand out. When it comes to launching a new venture or trying to revamp an existing one, your to-do list can seem a bit overwhelming. While the creative aspects of running a business might seem like the fun part, we all need a bit of inspiration from time to time to get the juices flowing.
-
-        </p>
+        <p>Every great business requires a bit of creativity in order to stand out. When it comes to launching a new venture or trying to revamp an existing one, your to-do list can seem a bit overwhelming. While the creative aspects of running a business might seem like the fun part, we all need a bit of inspiration from time to time to get the juices flowing.</p>
       </header>
 
       <div class="container">
         <div class="row table-row">
           <div class="col-sm-6 hidden-xs">
             <div class="section-content">
-              <div class="big-image" style="background-image:url(/static/images/1.png)"></div>
+              <div class="big-image" style="background-image:url(/static/images/2.png)"></div>
             </div>
           </div>
 
@@ -203,7 +251,7 @@
                 <div class="about-icon"><i class="fa fa-code"></i></div>
                 <div class="about-detail">
                   <h4>Use a slogan generator</h4>
-                  <p>One way to add a little bit of life to your business or campaign is with a catchy slogan. Think about it. Major corporations have been able to win over customers for years just with the right phrasing. Nike has ‘Just do it,’ the popular makeup brand, Maybelline, uses the tagline, ‘Maybe she’s born with it. Maybe it’s Maybelline.’ We’ve all heard these a million times, even when we aren’t thinking directly about the brands themselves. That’s why the right slogan can be so powerful in creating brand awareness or sparking interest in a business or new project.</p>
+                  <p>One way to add a little bit of life to your business or campaign is with a catchy slogan. Think about it. Major corporations have been able to win over customers for years just with the right phrasing. That’s why the right slogan can be so powerful in creating brand awareness or sparking interest in a business or new project.</p>
                 </div>
               </div>
 
@@ -211,7 +259,7 @@
                 <div class="about-icon"><i class="fa fa-desktop"></i></div>
                 <div class="about-detail">
                   <h4>Choose the perfect tagline</h4>
-                  <p>That’s it! Now it’s time to select the perfect slogan for your latest endeavor that’s sure to stick in your audience’s mind long after they first hear it. Choose from all the answers the slogan maker generates from a built-in algorithm. Don’t be afraid to use the slogan maker solely for inspiration, and rest assured that this slogan maker online draws upon thousands of tried-and-true advertising slogans that have been used by real companies over the past several decades.  </p>
+                  <p>That’s it! Now it’s time to select the perfect slogan for your latest endeavor that’s sure to stick in your audience’s mind long after they first hear it. Choose from all the answers the slogan maker generates from a built-in algorithm.</p>
                 </div>
               </div>
 
@@ -219,17 +267,19 @@
                 <div class="about-icon"><i class="fa fa-cube"></i></div>
                 <div class="about-detail">
                   <h4>Stand out in seconds!</h4>
-                  <p>The slogan maker is quick, easy to use, and within nanoseconds you can have thousands of captivating phrases right at your fingertips. After you’ve taken some time to choose the perfect tagline from the slogan generator you’re ready to apply it to your brand and begin using it on your website and social media platforms. If you want to take your slogan to the next level, consider presentation. Now all that’s left to do is see if you can work it into the headline of your website or include it in your logo.</p>
+                  <p>The slogan maker is quick, easy to use, and within nanoseconds you can have captivating phrases right at your fingertips. You can work it into the headline of your website or include it in your logo.</p>
                 </div>
               </div>
             </div>
           </div>
-        </div> <!-- /.row table-row -->
-      </div> <!-- /.container -->
+        </div> 
+      </div> 
     </section>
 	
 	
-	    
+	  
+
+
     <!-- TEAM -->
 
     <section id="team" class="light">
@@ -240,97 +290,74 @@
       
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-sm-6 text-center">
+          <div class="col-md-4 col-sm-6 text-center">
             <div class="wrap animated" data-animate="fadeInDown">
               <div class="img-team">
-                <img src="static/images/" alt="" class="img-circle">
+                <img src="/static/images/sakshi.png" alt="" class="img-circle">
               </div>
 
               <h3>Sakshi Dhoble</h3>
-              <h5>Creative Director</h5>
+              <h5>Developer</h5>
 
               <p>B.E Information Technology</p>
 
               <div class="team-social">
                 <ul class="list-inline social-list">
-                  <li><a href="#" class="fa fa-twitter"></a></li>
-                  <li><a href="#" class="fa fa-linkedin"></a></li>
-                  <li><a href="#" class="fa fa-facebook"></a></li>
-                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                  <li><i class="icon-facebook"></i></li>
+                  <li><i class="icon-linkedin"></i></li>
+                  <li><i class="icon-twitter"></i></li>
+                  <li><i class="icon-google-plus"></i></li>
                 </ul> 
               </div>                
             </div>
           </div>
 
-          <div class="col-md-3 col-sm-6 text-center">
+          <div class="col-md-4 col-sm-6 text-center">
             <div class="wrap animated" data-animate="fadeInDown"> 
               <div class="img-team">
-                <img src="images/team-2.png" alt="" class="img-circle">
+                <img src="/static/images/aditi.png" alt="" class="img-circle">
               </div>
 
               <h3>Aditi Deshmukh</h3>
-              <h5>Designer</h5>
+              <h5>Developer</h5>
 
               <p>B.E Information Technology</p>
 
               <div class="team-social">
                 <ul class="list-inline social-list">
-                  <li><a href="#" class="fa fa-twitter"></a></li>
-                  <li><a href="#" class="fa fa-linkedin"></a></li>
-                  <li><a href="#" class="fa fa-facebook"></a></li>
-                  <li><a href="#" class="fa fa-google-plus"></a></li>
-                </ul> 
-              </div>                
-            </div>
-          </div>
-
-          
-          <div class="col-md-3 col-sm-6 text-center">
-            <div class="wrap animated" data-animate="fadeInDown"> 
-              <div class="img-team">
-                <img src="images/" alt="" class="img-circle">
-              </div>
-
-              <h3>Vanshika Jethani</h3>
-              <h5>Designer</h5>
-
-              <p>B.E Information Technology</p>
-
-              <div class="team-social">
-                <ul class="list-inline social-list">
-                  <li><a href="#" class="fa fa-twitter"></a></li>
-                  <li><a href="#" class="fa fa-linkedin"></a></li>
-                  <li><a href="#" class="fa fa-facebook"></a></li>
-                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                  <li><i class="icon-facebook"></i></li>
+                  <li><i class="icon-linkedin"></i></li>
+                  <li><i class="icon-twitter"></i></li>
+                  <li><i class="icon-google-plus"></i></li>
                 </ul> 
               </div>                
             </div>
           </div>
 
 
-          <div class="col-md-3 col-sm-6 text-center">
+          <div class="col-md-4 col-sm-6 text-center">
             <div class="wrap animated" data-animate="fadeInDown"> 
               <div class="img-team">
-                <img src="images/team-4.png" alt="" class="img-circle">
+                <img src="/static/images/vanshi.png" alt="" class="img-circle">
               </div>
 
-              <h3>Mahima Samantara</h3>
-              <h5>Creative head</h5>
+              <h3>Vanshika</h3>
+              <h5>Developer</h5>
 
               <p>B.E Information Technology</p>
 
               <div class="team-social">
                 <ul class="list-inline social-list">
-                  <li><a href="#" class="fa fa-twitter"></a></li>
-                  <li><a href="#" class="fa fa-linkedin"></a></li>
-                  <li><a href="#" class="fa fa-facebook"></a></li>
-                  <li><a href="#" class="fa fa-google-plus"></a></li>
+                  <li><i class="icon-facebook"></i></li>
+                  <li><i class="icon-linkedin"></i></li>
+                  <li><i class="icon-twitter"></i></li>
+                  <li><i class="icon-google-plus"></i></li>
                 </ul> 
               </div>                
             </div>
           </div>
         </div>
-      </div> <!-- /.container -->
+      </div>
     </section>
 	
 	   
@@ -340,7 +367,6 @@
      <section id="contact" class="dark">
       <header class="title">
         <h2>Contact <span>Us</span></h2>
-        <!-- <p>Lorem ipsum Esse esse cillum nisi cillum deserunt tempor ut pariatur qui officia. Lorem ipsum Magna eu irure sint occaecat cupidatat dolore minim irure cillum.</p> -->
       </header>
 
       <div class="container">
@@ -349,10 +375,10 @@
             <form action="#">
               <div class="row">
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Your Name">
+                  <textarea class="form-control" rows="1" placeholder="Name"></textarea>
                 </div>
                 <div class="col-md-6">
-                  <input type="email" class="form-control" placeholder="Your Email">
+                  <textarea class="form-control" rows="1" placeholder="Email"></textarea>
                 </div>
                 <div class="col-md-12">
                   <textarea class="form-control" rows="3" placeholder="Tell Us Everything"></textarea>
@@ -367,9 +393,9 @@
           <div class="col-md-4 animated" data-animate="fadeInRight">
             <address>
                 <span><i class="fa fa-map-marker fa-lg"></i> Marine Lines, Metro Cinema, 400001</span>
-                <span><i class="fa fa-phone fa-lg"></i> (91) 992366752</span>
-                <span><i class="fa fa-envelope-o fa-lg"></i> <a href="mailto:contact@example.com">vanshi@gmail.com</a></span>
-                <span><i class="fa fa-globe fa-lg"></i> <a href="http://support.example.com">Aditisupport.example.com</a></span>
+                <span><i class="fa fa-phone fa-lg"></i>(91) 992366752</span>
+                <span><i class="icon-envelope fa-lg"></i> <a href="mailto:contact@example.com">pygirls@gmail.com</a></span>
+                <span><i class="fa fa-globe fa-lg"></i> <a href="http://support.example.com">pygirls3support.example.com</a></span>
             </address>
           </div>
 		  
@@ -381,8 +407,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <p>Made BY <i class="fa fa-heart"></i> <a href="http://templatestock.co">PyGirls</a></p>
-          
+            <p>Made BY <i class="fa fa-heart"></i> <a href="#">PyGirls</a></p>
+            
           </div>
         </div>
       </div>
@@ -431,7 +457,7 @@
   </script>
   
   <script>
-      function record() {
+      function recordspeechtotext() {
           var recognition = new webkitSpeechRecognition();
           recognition.lang = "en-GB";
 
@@ -443,6 +469,32 @@
 
       }
   </script>
+
+  <script>
+    function recordcta() {
+        var recognition = new webkitSpeechRecognition();
+        recognition.lang = "en-GB";
+
+        recognition.onresult = function (event) {
+            
+            document.getElementById('cta').value = event.results[0][0].transcript;
+        }
+        recognition.start();
+
+    }
+</script>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+  </script> 
+
+<script type="text/javascript" 
+ src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+
+
     <script type="text/javascript" src="/static/js/main.js"></script>
 	</body>
 </html>

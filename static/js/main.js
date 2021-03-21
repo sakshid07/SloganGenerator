@@ -21,7 +21,6 @@ var SliderStatus = true;
 	});
 })(jQuery);
 
-
 (function($){
 
 	"use strict"
@@ -158,7 +157,7 @@ var SliderStatus = true;
 	        });
 	    });
 
-		
+		// anchor handler
 		$(document).on("click", "a", function(e){
 			var full_url = this.href,
 				windowWidth = window.innerWidth,
@@ -182,7 +181,7 @@ var SliderStatus = true;
 		});
 
 
-		
+		// animated element
 		$(".animated").appear(function() {
 	        var element = $(this),
 	        	animation = element.data("animate"),
@@ -215,6 +214,7 @@ var SliderStatus = true;
 	});
 
 
+    // PORTFOLIO
 
     $(document).on("ready", function(){
     	"use strict"
@@ -277,7 +277,7 @@ var SliderStatus = true;
     });
 
 
-    
+    //Google map
 
 	$(document).on("ready", function() {
 

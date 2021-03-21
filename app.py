@@ -1,10 +1,10 @@
 from flask import Flask, render_template,request
-app = Flask(__name__) #creating the Flask class object   
+app = Flask(__name__) 
 from gensim.summarization import keywords
 import pandas as pd
 import re
 
-@app.route('/ho') #decorator drfines the   
+@app.route('/ho')   
 def home():
     return render_template('index.html')  
 @app.route('/') 
